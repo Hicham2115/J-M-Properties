@@ -149,7 +149,7 @@ export function Reviews() {
         </div>
 
         <div className="mt-14 rounded-2xl bg-white p-6 sm:p-10 lg:p-12">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center justify-center">
             <div className="flex shrink-0 flex-col items-start gap-1 sm:border-foreground/10 sm:border-r sm:pr-6">
               <span className="font-serif text-5xl text-foreground leading-none">
                 {averageRating.toFixed(1)}
@@ -160,7 +160,7 @@ export function Reviews() {
               </span>
             </div>
 
-            <div className="max-w-xl flex-1 space-y-2.5">
+            <div className="max-w-xl flex-1 space-y-2.5 ">
               {DISTRIBUTION.map((percent, i) => {
                 const star = 5 - i;
                 const count = Math.max(
@@ -187,7 +187,7 @@ export function Reviews() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-2.5">
+          <div className="mt-6 flex flex-wrap gap-2.5 justify-center">
             {CATEGORY_SCORES.map((category) => (
               <div
                 key={category.label}
