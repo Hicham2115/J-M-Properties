@@ -3,14 +3,18 @@ import {
   Bed,
   Car,
   ChefHat,
-  Heart,
+  CheckCircle2,
+  KeyRound,
+  LifeBuoy,
   MapPin,
   Snowflake,
+  Sparkles,
   Star,
   Tv,
   Waves,
   Wifi,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { BookingCard } from "./booking-card";
@@ -25,6 +29,25 @@ const amenityIcons = {
   tv: Tv,
   laundry: Waves,
 } as const;
+
+const includedServiceDetails: Record<string, { icon: LucideIcon; note: string }> = {
+  "Daily housekeeping": {
+    icon: Sparkles,
+    note: "Refreshed every day, without asking",
+  },
+  "Personal check-in": {
+    icon: KeyRound,
+    note: "Greeted in person, not left a code",
+  },
+  "Linens included": {
+    icon: Bed,
+    note: "Hotel-grade sheets and towels",
+  },
+  "24/7 support": {
+    icon: LifeBuoy,
+    note: "A real person answers, any hour",
+  },
+};
 
 export function PropertyDetail({ property }: { property: Property }) {
   return (
@@ -126,17 +149,26 @@ export function PropertyDetail({ property }: { property: Property }) {
                   Included services
                 </h2>
                 <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {property.includedServices.map((service) => (
-                    <div
-                      className="flex items-center gap-3 rounded-lg bg-gold-dark/8 px-4 py-3"
-                      key={service}
-                    >
-                      <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white text-gold-dark">
-                        <Heart size={14} strokeWidth={1.5} />
-                      </span>
-                      <span className="text-ink/80 text-sm">{service}</span>
-                    </div>
-                  ))}
+                  {property.includedServices.map((service) => {
+                    const detail = includedServiceDetails[service];
+                    const Icon = detail?.icon ?? CheckCircle2;
+                    return (
+                      <div
+                        className="flex items-start gap-3.5 rounded-lg bg-gold-dark/8 px-4 py-3.5 transition-colors duration-200 hover:bg-gold-dark/14"
+                        key={service}
+                      >
+                        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white text-gold-dark">
+                          <Icon size={16} strokeWidth={1.5} />
+                        </span>
+                        <div>
+                          <p className="font-medium text-ink text-sm">{service}</p>
+                          {detail && (
+                            <p className="mt-0.5 text-ink/50 text-xs">{detail.note}</p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </section>
             </div>

@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { FeaturedProperties } from "@/components/featured-properties";
 import { WhyUs } from "@/components/why-us";
 import { Concierge } from "@/components/concierge";
+import { Reviews } from "@/components/reviews";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <FeaturedProperties />
         <WhyUs />
         <Concierge />
+        <Reviews />
       </main>
       <Footer />
     </>

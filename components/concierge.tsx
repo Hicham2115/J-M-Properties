@@ -7,6 +7,7 @@ import familyImage from "@/app/assets/Family.jpg";
 import excursionsImage from "@/app/assets/Excursions.jpg";
 
 type ConciergeService = {
+  n: string;
   icon: LucideIcon;
   image: StaticImageData;
   title: string;
@@ -74,40 +75,49 @@ export function Concierge() {
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service) => (
-            <article
-              key={service.title}
-              className="group relative flex flex-col overflow-hidden rounded-sm border border-foreground/10 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-gold/30 hover:shadow-xl hover:shadow-black/6"
-            >
-              <div className="relative aspect-4/3 overflow-hidden bg-cream">
+            <article key={service.title} className="group">
+              <div className="relative aspect-4/5 overflow-hidden bg-cream">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/0 to-black/0" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/0 to-black/0" />
 
-                <span className="absolute top-4 left-4 rounded-sm bg-gold px-3 py-1 text-[10px] font-bold tracking-[0.15em] text-white uppercase shadow-sm">
+                <span className="absolute bottom-4 left-4 font-serif text-lg text-white">
                   {service.price}
                 </span>
               </div>
 
-              <div className="relative flex flex-1 flex-col border-t border-foreground/10 p-6 pt-9">
-                <h3 className="font-serif text-xl text-foreground">
-                  {service.title}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-foreground/60">
-                  {service.description}
-                </p>
-                <a
-                  href="/contact"
-                  className="group/link mt-5 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-gold uppercase transition-colors hover:text-gold/80"
-                >
-                  Add to Your Stay
-                  <ArrowRight className="size-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
-                </a>
+              <div className="mt-5 flex items-center gap-3">
+                <service.icon
+                  className="size-4 shrink-0 text-gold"
+                  strokeWidth={1.5}
+                />
+                <span className="text-[11px] font-bold tracking-[0.2em] text-gold/70">
+                  {service.n}
+                </span>
+                <span
+                  className="h-px flex-1 bg-foreground/10"
+                  aria-hidden="true"
+                />
               </div>
+
+              <h3 className="mt-4 font-serif text-xl text-foreground">
+                {service.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/60">
+                {service.description}
+              </p>
+              <a
+                href="/contact"
+                className="group/link mt-4 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-gold uppercase transition-colors hover:text-gold/80"
+              >
+                Add to Your Stay
+                <ArrowRight className="size-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
+              </a>
             </article>
           ))}
         </div>

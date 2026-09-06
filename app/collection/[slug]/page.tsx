@@ -18,7 +18,7 @@ export default async function PropertyPage({ params }: PageProps<"/collection/[s
 
   return (
     <main>
-      <SiteHeader />
+      <SiteHeader forceSolid />
       <PropertyDetail property={property} />
       <Footer />
     </main>

@@ -28,17 +28,19 @@ const NAV_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-export function SiteHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
+export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean }) {
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
-      setIsScrolled(window.scrollY > 24);
+      setHasScrolled(window.scrollY > 24);
     }
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const isScrolled = forceSolid || hasScrolled;
 
   return (
     <header
