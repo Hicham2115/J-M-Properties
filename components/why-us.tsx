@@ -1,6 +1,9 @@
 import Image from "next/image";
-import villaPanorama from "@/app/assets/Appart Yakout/1.jpeg";
-import prestigiaJubaea15 from "@/app/assets/Appart Yakout/1.jpeg";
+import villaNerolia1 from "@/app/assets/Villa Nerolia/1.jpeg";
+import villaNerolia2 from "@/app/assets/Villa Nerolia/2.jpeg";
+import villaNerolia3 from "@/app/assets/Villa Nerolia/3.jpeg";
+import villaNerolia4 from "@/app/assets/Villa Nerolia/4.jpeg";
+import villaNerolia5 from "@/app/assets/Villa Nerolia/5.jpeg";
 
 const REASONS = [
   {
@@ -63,36 +66,32 @@ export function WhyUs() {
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-110 pb-10 lg:mx-0 lg:max-w-none lg:pb-14">
-            <span
-              aria-hidden="true"
-              className="absolute top-1/2 -left-10 hidden -translate-y-1/2 -rotate-90 text-[10px] tracking-[0.35em] text-white/30 uppercase xl:block"
-            >
-              Marrakech, Morocco
-            </span>
-
-            <div
-              aria-hidden="true"
-              className="absolute -top-10 -right-8 -z-10 size-72 rounded-full bg-gold/10 blur-3xl"
-            />
-
-            <div className="relative aspect-4/5 w-full overflow-hidden rounded-sm shadow-2xl shadow-black/40">
-              <Image
-                src={villaPanorama}
-                alt="Living room of a J&M Housing villa in Marrakech"
-                fill
-                sizes="(min-width: 1024px) 45vw, 90vw"
-                className="object-cover"
-              />
-            </div>
-
-            <div className="absolute bottom-0 -left-6 z-10 w-[45%] max-w-55 overflow-hidden rounded-sm border-2 border-gold/40 shadow-xl shadow-black/50 sm:-left-10">
-              <div className="relative aspect-4/5">
+          <div className="mx-auto w-full max-w-110 lg:mx-0 lg:max-w-none">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="relative row-span-2 overflow-hidden rounded-sm">
                 <Image
-                  src={prestigiaJubaea15}
-                  alt="Entrance of a J&M Housing residence in Marrakech"
+                  src={villaNerolia1}
+                  alt="Living room of Villa Nerolia, a J&M Housing villa in Marrakech"
                   fill
-                  sizes="220px"
+                  sizes="(min-width: 1024px) 22vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-47.5 overflow-hidden rounded-sm sm:h-57.5 lg:h-67.5">
+                <Image
+                  src={villaNerolia2}
+                  alt="Salon of Villa Nerolia, a J&M Housing villa in Marrakech"
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative h-47.5 overflow-hidden rounded-sm sm:h-57.5 lg:h-67.5">
+                <Image
+                  src={villaNerolia5}
+                  alt="Bedroom of Villa Nerolia, a J&M Housing villa in Marrakech"
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 45vw"
                   className="object-cover"
                 />
               </div>

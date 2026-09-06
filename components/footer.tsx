@@ -150,17 +150,25 @@ export function Footer() {
       >
         <span className="text-[11vw]">J&amp;M HOUSING</span>
       </div>
+
+      <p className="relative m-0 border-white/10 border-t px-5 py-4 text-center text-[11px] text-white/35">
+        Designed and developed by{" "}
+        <a
+          className="group relative inline-block py-0.5 text-white/50 transition-colors duration-300 hover:text-gold"
+          href="https://www.stallionadvertising.ma/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Stallion Advertising
+          <span className="absolute inset-x-0 -bottom-0.5 h-px origin-center scale-x-0 bg-gold transition-transform duration-300 ease-out group-hover:scale-x-100" />
+        </a>
+        .
+      </p>
     </footer>
   );
 }
 
-function FooterLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: ReactNode;
-}) {
+function FooterLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link
       href={href}

@@ -18,23 +18,23 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-[1600px]">
         <div className="max-w-5xl">
-          <p className="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-gold">
+          <p className="animate-in fade-in slide-in-from-bottom-4 mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-gold duration-700 fill-mode-both">
             <span className="size-1 rounded-full bg-gold" aria-hidden="true" />
             Luxury stays &amp; bespoke experiences
           </p>
 
-          <h1 className="font-serif font-semibold tracking-tight text-5xl leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="animate-in fade-in slide-in-from-bottom-4 font-serif text-5xl leading-[1.05] font-semibold tracking-tight delay-150 duration-700 fill-mode-both sm:text-6xl md:text-7xl lg:text-8xl">
             Stay Beautifully, Experience
             <br />
             Morocco Differently<span className="text-gold">.</span>
           </h1>
 
-          <p className="mt-7 mb-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="animate-in fade-in slide-in-from-bottom-4 mt-7 mb-8 max-w-xl text-base leading-relaxed text-white/80 delay-300 duration-700 fill-mode-both sm:text-lg">
             Discover exceptional stays and personalized experiences designed
             around you.
           </p>
 
-          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+          <div className="animate-in fade-in slide-in-from-bottom-4 flex flex-col items-stretch gap-3 delay-500 duration-700 fill-mode-both sm:flex-row sm:items-center">
             <Button
               asChild
               className="min-h-14 rounded-sm bg-gold px-7 text-xs font-bold tracking-[0.15em] uppercase text-white hover:bg-gold/90"

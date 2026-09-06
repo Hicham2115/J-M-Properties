@@ -40,8 +40,8 @@ export function FeaturedProperties() {
               Unforgettable Moments.
             </h2>
             <p className="mt-5 max-w-lg text-foreground/70">
-              Carefully selected villas, riads and apartments, each with its
-              own unique character, designed for an extraordinary Moroccan
+              Carefully selected villas, riads and apartments, each with its own
+              unique character, designed for an extraordinary Moroccan
               experience.
             </p>
           </div>
