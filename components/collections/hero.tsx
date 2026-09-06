@@ -28,11 +28,11 @@ export function CollectionsHero() {
         </p>
         <h1 className="font-serif font-medium text-4xl leading-[1.12] tracking-tight sm:text-6xl">
           Addresses we would happily{" "}
-          <span className="text-gold italic">stay in ourselves.</span>
+          <span className="text-gold ">stay in ourselves.</span>
         </h1>
         <p className="mx-auto mt-5 max-w-md text-[15px] text-white/70 leading-relaxed">
-          We choose these homes the way we'd choose our own, so every stay
-          feels effortless from arrival to departure.
+          We choose these homes the way we'd choose our own, so every stay feels
+          effortless from arrival to departure.
         </p>
       </div>
 
