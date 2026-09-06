@@ -1,16 +1,19 @@
+"use client";
+
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Mail, MessageCircle, Phone } from "lucide-react";
+import { handleSectionNavClick } from "@/lib/scroll-to-section";
 
 const EXPLORE_LINKS = [
   { label: "Collections", href: "/collection" },
-  { label: "Experiences", href: "/experiences" },
-  { label: "Destinations", href: "/destinations" },
+  { label: "Experiences", href: "/#concierge" },
+  { label: "Destinations", href: "/#portfolio" },
 ];
 
 const COMPANY_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "/#why-jm" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const LEGAL_LINKS = [
@@ -175,6 +178,7 @@ function FooterLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link
       href={href}
+      onClick={(event) => handleSectionNavClick(event, href)}
       className="group/link relative inline-block text-white/70 transition-colors hover:text-white"
     >
       {children}

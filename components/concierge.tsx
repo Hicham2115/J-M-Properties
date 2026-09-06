@@ -56,7 +56,7 @@ const SERVICES: ConciergeService[] = [
 
 export function Concierge() {
   return (
-    <section className="bg-white py-24 sm:py-28 lg:py-32">
+    <section id="concierge" className="scroll-mt-24 bg-white py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-[5.8vw]">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-4 flex items-center justify-center gap-3 text-xs font-bold tracking-[0.2em] text-gold uppercase">

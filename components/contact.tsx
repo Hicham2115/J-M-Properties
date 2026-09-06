@@ -28,7 +28,7 @@ export function Contact() {
   }
 
   return (
-    <section className="bg-white py-24 sm:py-28 lg:py-32">
+    <section id="contact" className="scroll-mt-24 bg-white py-24 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-[5.8vw]">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-stretch lg:gap-20">
           <div className="relative order-2 hidden min-h-130 overflow-hidden rounded-sm lg:order-1 lg:block">

@@ -18,18 +18,20 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import logo from "@/app/assets/logo.png";
+import { handleSectionNavClick } from "@/lib/scroll-to-section";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Collections", href: "/collection" },
-  { label: "Experiences", href: "/experiences" },
-  { label: "Destinations", href: "/destinations" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Experiences", href: "/#concierge" },
+  { label: "Destinations", href: "/#portfolio" },
+  { label: "About", href: "/#why-jm" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean }) {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
@@ -82,6 +84,7 @@ export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean }) {
                 >
                   <Link
                     href={link.href}
+                    onClick={(event) => handleSectionNavClick(event, link.href)}
                     className="group/navlink relative inline-block pb-2"
                   >
                     {link.label}
@@ -111,7 +114,7 @@ export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean }) {
           </Button>
         </div>
 
-        <Popover>
+        <Popover open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <PopoverTrigger
             asChild
             className={cn(
@@ -132,6 +135,10 @@ export function SiteHeader({ forceSolid = false }: { forceSolid?: boolean }) {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={(event) => {
+                    handleSectionNavClick(event, link.href);
+                    setMobileMenuOpen(false);
+                  }}
                   className={cn(
                     "rounded-sm px-3 py-2 text-sm tracking-wide hover:bg-gold/10",
                     link.label === "Home" ? "text-gold" : "text-foreground/80",

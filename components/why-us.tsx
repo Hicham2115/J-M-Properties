@@ -32,7 +32,7 @@ export function WhyUs() {
   return (
     <section
       id="why-jm"
-      className="relative overflow-hidden bg-navy py-16 text-white sm:py-20 lg:py-24"
+      className="relative scroll-mt-24 overflow-hidden bg-navy py-16 text-white sm:py-20 lg:py-24"
     >
       <div className="relative mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-[5.8vw]">
         <div className="grid gap-20 lg:grid-cols-2 lg:items-center lg:gap-24">

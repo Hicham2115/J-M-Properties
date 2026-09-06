@@ -41,7 +41,10 @@ export function Portfolio() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-navy py-16 text-white sm:py-20 lg:py-24">
+    <section
+      id="portfolio"
+      className="relative scroll-mt-24 overflow-hidden bg-navy py-16 text-white sm:py-20 lg:py-24"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
