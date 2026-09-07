@@ -1,62 +1,14 @@
-import Image, { type StaticImageData } from "next/image";
-import { ArrowRight, Baby, Car, ChefHat, Mountain } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-import chefImage from "@/app/assets/Private Home Chef .jpg";
-import transferImage from "@/app/assets/VIP Airport.jpg";
-import familyImage from "@/app/assets/Family.jpg";
-import excursionsImage from "@/app/assets/Excursions.jpg";
-
-type ConciergeService = {
-  n: string;
-  icon: LucideIcon;
-  image: StaticImageData;
-  title: string;
-  price: string;
-  description: string;
-};
-
-const SERVICES: ConciergeService[] = [
-  {
-    n: "01",
-    icon: ChefHat,
-    image: chefImage,
-    title: "Private Home Chef",
-    price: "From 500 MAD",
-    description:
-      "Tajine, pastilla, mechoui... Enjoy an authentic Moroccan culinary experience prepared directly at your accommodation.",
-  },
-  {
-    n: "02",
-    icon: Car,
-    image: transferImage,
-    title: "VIP Airport Transfer",
-    price: "From 300 MAD",
-    description:
-      "Mercedes E-Class or V-Class with private driver, airport meet & greet and a seamless arrival.",
-  },
-  {
-    n: "03",
-    icon: Baby,
-    image: familyImage,
-    title: "Family Pack",
-    price: "Free",
-    description:
-      "Crib, high chair, stroller and children's games. Everything prepared before your arrival.",
-  },
-  {
-    n: "04",
-    icon: Mountain,
-    image: excursionsImage,
-    title: "Organized Excursions",
-    price: "On quote",
-    description:
-      "Atlas Mountains, Essaouira, Agafay Desert, quad biking, hot-air balloon and unforgettable Moroccan experiences.",
-  },
-];
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { SERVICES } from "@/components/concierge/services-data";
 
 export function Concierge() {
   return (
-    <section id="concierge" className="scroll-mt-24 bg-white py-24 sm:py-28 lg:py-32">
+    <section
+      id="concierge"
+      className="scroll-mt-24 bg-white py-24 sm:py-28 lg:py-32"
+    >
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-[5.8vw]">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-4 flex items-center justify-center gap-3 text-xs font-bold tracking-[0.2em] text-gold uppercase">
@@ -76,20 +28,22 @@ export function Concierge() {
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service) => (
             <article key={service.title} className="group">
-              <div className="relative aspect-4/5 overflow-hidden bg-cream">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/0 to-black/0" />
+              <Link href={`/concierge/${service.slug}`} className="block">
+                <div className="relative aspect-4/5 overflow-hidden bg-cream">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/0 to-black/0" />
 
-                <span className="absolute bottom-4 left-4 font-serif text-lg text-white">
-                  {service.price}
-                </span>
-              </div>
+                  <span className="absolute bottom-4 left-4 font-serif text-lg text-white">
+                    {service.price}
+                  </span>
+                </div>
+              </Link>
 
               <div className="mt-5 flex items-center gap-3">
                 <service.icon
@@ -111,13 +65,13 @@ export function Concierge() {
               <p className="mt-2 text-sm leading-relaxed text-foreground/60">
                 {service.description}
               </p>
-              <a
-                href="/contact"
+              <Link
+                href={`/concierge/${service.slug}`}
                 className="group/link mt-4 inline-flex items-center gap-2 text-xs font-bold tracking-widest text-gold uppercase transition-colors hover:text-gold/80"
               >
-                Add to Your Stay
+                Discover Services
                 <ArrowRight className="size-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
-              </a>
+              </Link>
             </article>
           ))}
         </div>
