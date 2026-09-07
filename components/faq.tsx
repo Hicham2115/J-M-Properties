@@ -62,7 +62,7 @@ export function Faq() {
               Everything you need to know before booking your stay. Still
               curious about something?{" "}
               <a
-                href="https://wa.me/212600000000"
+                href="https://wa.me/212706089488"
                 target="_blank"
                 rel="noreferrer"
                 className="group/link relative inline-flex items-center gap-1 font-medium text-gold"

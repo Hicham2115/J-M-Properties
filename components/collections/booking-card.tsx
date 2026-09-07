@@ -4,7 +4,7 @@ import { CalendarDays, MessageCircle, Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import type { Pricing } from "./properties-data";
 
-const WHATSAPP_NUMBER = "212600000000";
+const WHATSAPP_NUMBER = "212706089488";
 
 function formatMad(value: number) {
   return `${value.toLocaleString("en-US")} MAD`;

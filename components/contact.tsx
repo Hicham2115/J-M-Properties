@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowRight, Mail, MapPin, MessageCircle } from "lucide-react";
 import villaGolfAmelkis from "@/app/assets/Appart Mabrouka/1.jpeg";
 
-const WHATSAPP_NUMBER = "212600000000";
+const WHATSAPP_NUMBER = "212706089488";
 
 export function Contact() {
   const [name, setName] = useState("");
@@ -67,14 +67,14 @@ export function Contact() {
                 className="inline-flex items-center gap-2 text-foreground/70 transition-colors hover:text-gold"
               >
                 <MessageCircle className="size-4 text-gold" strokeWidth={1.5} />
-                +212 6 00 00 00 00
+                +212 7 06 08 94 88
               </a>
               <a
-                href="mailto:hello@jmhousing-hospitality.com"
+                href="mailto:contact@conciergerie-marrakech.com"
                 className="inline-flex items-center gap-2 text-foreground/70 transition-colors hover:text-gold"
               >
                 <Mail className="size-4 text-gold" strokeWidth={1.5} />
-                hello@jmhousing-hospitality.com
+                contact@conciergerie-marrakech.com
               </a>
               <span className="inline-flex items-center gap-2 text-foreground/70">
                 <MapPin className="size-4 text-gold" strokeWidth={1.5} />

@@ -92,7 +92,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="https://wa.me/212600000000"
+                  href="https://wa.me/212706089488"
                   target="_blank"
                   rel="noreferrer"
                   className="group/link flex items-center gap-2 transition-colors hover:text-white"
@@ -106,24 +106,24 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+212600000000"
+                  href="tel:+212706089488"
                   className="group/link flex items-center gap-2 transition-colors hover:text-white"
                 >
                   <Phone className="size-4 text-gold" />
                   <span className="relative">
-                    +212 6 00 00 00 00
+                    +212 7 06 08 94 88
                     <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-gold transition-transform duration-300 ease-out group-hover/link:scale-x-100" />
                   </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:hello@jmhousing-hospitality.com"
+                  href="mailto:contact@conciergerie-marrakech.com"
                   className="group/link flex items-center gap-2 transition-colors hover:text-white"
                 >
                   <Mail className="size-4 shrink-0 text-gold" />
                   <span className="relative break-all">
-                    hello@jmhousing-hospitality.com
+                    contact@conciergerie-marrakech.com
                     <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-gold transition-transform duration-300 ease-out group-hover/link:scale-x-100" />
                   </span>
                 </a>
